@@ -18,6 +18,20 @@ g++ -std=c++17 -Isrc tests/core_tests.cpp src/core/Compiler.cpp src/core/Lexer.c
 .\build\core_tests.exe
 ```
 
+## Run Without Qt
+
+If the Qt kit is not ready, use the pure C++ command-line frontend:
+
+```powershell
+New-Item -ItemType Directory -Force build
+g++ -std=c++17 -Isrc src/cli/main.cpp src/core/Compiler.cpp src/core/Lexer.cpp src/core/Parser.cpp src/core/Optimizer.cpp src/core/Target.cpp -o build/minipas_cli.exe
+.\build\minipas_cli.exe examples/sample.minipas
+.\build\minipas_cli.exe examples/extended.minipas
+.\build\minipas_cli.exe examples/error_cases.minipas
+```
+
+The CLI prints tokens, tables, AST, quadruples, optimized quadruples, target code, VM trace, output, final memory, and diagnostics.
+
 ## Build Qt GUI
 
 The local machine currently has Qt 5.15.2 from Anaconda. If `qmake` points to a MSVC spec, install Visual Studio Build Tools or switch to a matching Qt MinGW kit.
