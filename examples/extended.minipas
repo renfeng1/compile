@@ -1,0 +1,19 @@
+program loops
+var i,sum: integer;
+    nums: array[3] of integer;
+begin
+  i := 0;
+  sum := 0;
+  nums[0] := 1;
+  nums[1] := 2;
+  nums[2] := 3;
+  while i < 3 do
+  begin
+    sum := sum + nums[i];
+    i := i + 1
+  end;
+  if sum >= 6 then
+    write("sum=", sum)
+  else
+    write("unexpected")
+end.

@@ -1,0 +1,6 @@
+program bad
+var a: integer;
+begin
+  b := 1;
+  a := "wrong type"
+end.

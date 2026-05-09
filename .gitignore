@@ -1,0 +1,16 @@
+build/
+debug/
+release/
+docs/
+*.pptx
+*.doc
+*.docx
+*.jpg
+*.png
+*.o
+*.obj
+*.exe
+*.user
+Makefile
+Makefile.*
+.qmake.stash
